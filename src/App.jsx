@@ -3,6 +3,7 @@ import { ColorfulMessage } from "./components/ColorfulMessage";
 
 export const App = () => {
   const [num, setNum] = useState(0);
+  const [isShowFace, seIsShowFace] = useState(true);
   const onClickCountUp = () => {
     setNum((prev) => prev + 1);
     setNum((prev) => prev + 1);
@@ -15,6 +16,8 @@ export const App = () => {
       <ColorfulMessage color="green">元気です!</ColorfulMessage>
       <button onClick={onClickCountUp}>カウントアップ</button>
       <p>{num}</p>
+      <button>on/off</button>
+      {isShowFace && <p>aiu</p>}
     </>
   );
 };
